@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The place where you will find your next house">
+  <link href="./src/output.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Find House</title>
 </head>
 
-<body class="overflow-hidden px-18 sm:px-2 md:px-80 md:px-90">
+<body class=" mx-4 max-w-screen sm:mx-[4vw] lg:mx-[5vw] xl:mx-[6vw]">
   <header>
     <nav class="flex ... items-center justify-between mb-8">
       <div class="flex ... items-center justify-between md:gap-x-12">
-        <img src="./__MACOSX/Logo.png" class=""/>
+        <img src="/__MACOSX/Logo.png" alt=" Our Logo" class="" />
         <ul class="left md:flex md:items-center md:gap-x-12 hidden md:block">
           <li><a href="#">HOME</a></li>
           <li><a href="#">SHOP</a></li>
@@ -20,9 +23,9 @@
         </ul>
       </div>
       <div class="relative right flex items-center w-25 gap-x-12 md:w-32">
-        <img src="./__MACOSX/Cart Button.png" />
+        <img src="/__MACOSX/Cart Button.png" alt="Cart Button" />
         <button type="button" class="cursor-pointer w-200 md:hidden" id="dropdownButton">
-          <img src="./__MACOSX/menu-hamburger.png" />
+          <img src="/__MACOSX/menu-hamburger.png" alt="Menu Hamburger" />
         </button>
         <div id="dropdownMenu"
           class="absolute right-4 z-10 mt-40 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden">
@@ -44,20 +47,22 @@
 
 
     <div class="md:flex md:items-center">
-      
+
       <div class="flex items-center md:w-4/6 pr-1">
 
-        <img src="./__MACOSX/Search.png" class="md:w-10 md:ml-6 w-5 ml-8 pb-2 flex-none" />
+        <img src="./__MACOSX/Search.png" alt="search Button" class="md:w-10 md:ml-6 w-5 ml-8 pb-2 flex-none" />
 
-        <div class="md:flex-auto border-b-3 border-solid md:ml-14 md:flex md:items-center md:justify-between md:pb-2 pb-2 ml-6 w-full">
+        <div
+          class="md:flex-auto border-b-3 border-solid md:ml-14 md:flex md:items-center md:justify-between md:pb-2 pb-2 ml-6 w-full">
 
-          <input type="search" name="search_bar" placeholder="Search..." class="outline-none md:w-4/6 md:text-3xl w-full" id="search_input" />
+          <input type="search" name="search_bar" placeholder="Search..."
+            class="outline-none md:w-4/6 md:text-3xl w-full" id="search_input" />
 
           <div class="md:flex md:justify-between md:gap-x-4 md:w-35 md:ml-10 hidden md:block">
             <div class="flex">
               <span class="text-[10px] text-[#0000009f]">Powered by <strong class="text-[#000]">Algolia</strong></span>
             </div>
-            <img src="./__MACOSX/Sajari Logo.png" />
+            <img src="/__MACOSX/Sajari Logo.png" alt="Logo of our business" />
           </div>
 
         </div>
@@ -65,16 +70,17 @@
       </div>
 
 
-      <div class="flex gap-x-6 mt-2 justify-end md:hidden ">
+      <!-- <div class="flex gap-x-6 mt-2 justify-end md:hidden ">
         <div class="flex">
           <span class="text-[13px] text-[#0000009f]">Powered by <strong class="text-[#000]">Algolia</strong></span>
         </div>
         <img src="./__MACOSX/Sajari Logo.png" />
-      </div>
+      </div> -->
 
 
       <div class="flex-auto md:ml-10 md:mt-0 mt-12 md:px-0 px-1">
-        <select name="select_bar" class="w-full text-3xl outline-none shadow block py-2 rounded bg-no-repeat bg-right bg-[url('./__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
+        <select name="select_bar"
+          class="w-full text-3xl outline-none shadow block py-2 rounded bg-no-repeat bg-right bg-[url('/__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
           <option value="Best_match" class="pt-4">Best match</option>
           <option value="Best_match">Best match</option>
           <option value="Best_match">Best match</option>
@@ -84,17 +90,288 @@
 
       <div class="md:hidden mt-8 px-1">
         <select name="select_bar"
-          class="w-full text-3xl outline-none shadow block w-full pb-4 rounded bg-no-repeat bg-right bg-[url('./__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
+          class="w-full text-3xl outline-none shadow block w-full pb-4 rounded bg-no-repeat bg-right bg-[url('/__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
           <option value="Best_match">Filters</option>
           <option value="Best_match">Best match</option>
           <option value="Best_match">Best match</option>
           <option value="Best_match">Best match</option>
         </select>
       </div>
-
-
     </div>
   </header>
+  <main class="pt-5 ">
+    <div>
+      <div class="flex flex-wrap justify-around">
+        <aside class="hidden md:flex md:flex-col w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <p class=" opacity-50">FILTER BY</p>
+
+          <div class="items opacity-75" onclick="toggleAccordion(this)">
+            <div class="header pt-4 pb-1 flex justify-between cursor-pointer">
+              <div class="">Categorie</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                stroke="currentColor" className="size-6" class="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            <div class="border-b-1 opacity-25 pb-1"></div>
+            <div class="content transition-all duration-500">
+              <ul>
+                <li class="my-2"><a href="/index.html" >Studio</a></li>
+                <li class="my-2"><a href="/index.html" >Apartments</a></li>
+                <li class="my-2"><a href="/index.html" >Double Rooms</a></li>
+                <li class="my-2"><a href="/index.html" >Suites</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="items opacity-75" onclick="toggleAccordion(this)">
+            <div class="header pt-4 pb-1 flex justify-between cursor-pointer">
+              <div>Location</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                stroke="currentColor" className="size-6" class="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </div>
+            <div class="border-b-1 opacity-25"></div>
+            <div class="content transition-all duration-500">
+                <ul>
+                <li class="my-2"><a href="/index.html" >Abomey-Calavi</a></li>
+                <li class="my-2"><a href="/index.html" >Cotopou</a></li>
+                <li class="my-2"><a href="/index.html" >Bohicon</a></li>
+                <li class="my-2"><a href="/index.html" >Porto-Novo</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="items opacity-75">
+            <div class="header pt-4 pb-1 flex justify-between">
+              <div class="">Price Range</div>
+            </div>
+            <div class="flex items-center w-full max-w-sm mx-auto">
+    <div class="w-4 h-4 rounded-full border-2 border-black-500 bg-white"></div>
+
+    <div class="flex-grow h-px bg-gray-500"></div>
+
+    <div class="w-4 h-4 rounded-full border-2 border-black-500 bg-white"></div>
+  </div>
+          </div>
+        </aside>
+        <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/maison-tiniki.jpg" alt="Jolie maison">
+            <figcaption class="hidden">Image de maison tiniki </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-80 px-4 py-1">
+            <span class="font-semibold">Villa Tikani</span>
+            <span>$2,500/month</span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">HOME</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/ifede-hostel.jpg" alt="Ifede-hostel">
+            <figcaption class="hidden">Image de Ifede-hostel </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Ifede Hostel</span>
+            <span>$300/month </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">STUDIO</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/golden-tulip.jpg" alt="Suites">
+            <figcaption class="hidden">Image de  suites </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Golden Suites</span>
+            <span>$100/day </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">Suites</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/cotonou-guest-house.avif" alt="Jolie maison">
+            <figcaption class="hidden">Image de jolie maison </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Appart Cotonou</span>
+            <span>$50/day </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">GUEST HOUSE</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/Appartement-haut-standing-3-chambres-a-louer-a-Agla.webp" alt="3 chambres à louer">
+            <figcaption class="hidden">Image de chambre à louer </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Future Appartements</span>
+            <span>$40,500/year </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">APPARTEMENT</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/Hit-appartement.jpg" alt="Hit-appartement">
+            <figcaption class="hidden">Image de Hit-appartement</figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Hit appartement</span>
+            <span>$2,500/month </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">APPARTEMENT</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+          <div class="w-full my-6 sm:w-[45vw] lg:w-[28vw] xl:w-[20vw]">
+          <figure class="cursor-pointer">
+            <img class="w-full h-[30vh] object-cover" src="/assets/duplex.jpg" alt="Duplex">
+            <figcaption class="hidden">Image de duplex </figcaption>
+          </figure>
+          <div class="flex justify-between opacity-90 px-4 py-1">
+            <span class="font-semibold">Duplex</span>
+            <span>$2,000/month </span>
+          </div>
+          <div class="flex justify-between pt-1 px-4">
+            <span>
+              <p class="opacity-75 ">LOUNGE</p>
+              <div class="flex justify-between  w-20">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star - On.png" alt="star">
+                <img src="assets/Star.png" alt="star">
+              </div>
+            </span>
+            <!-- <img src="assets/Cart-Button.png" class="object-contain" alt="Add to  Cart"> -->
+            <div
+              class="bg-[url(/assets/Cart-Button.png)] bg-center bg-no-repeat bg-size-[30px] px-6 pb-2 font-bold center cursor-pointer">
+              +
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <div class="flex w-full sm:w-[80vw] md:w-[40vw]  pagination py-10 justify-around items-center">
+    <span class="defilement default"><a href="#">1</a></span>
+    <span class="defilement"><a href="#">2</a></span>
+    <span class="defilement"><a href="#">3</a></span>
+    <span class="defilement"><a href="#">4</a></span>
+    <span class="defilement hidden sm:block md:block"><a href="#">5</a></span>
+    <span class="defilement hidden sm:block md:block"><a href="#">6</a></span>
+    <span class="defilement hidden md:block"><a href="#">7</a></span>
+    <span class="defilement hidden md:block"><a href="#">8</a></span>
+    <span class="defilement hidden md:block"><a href="#">9</a></span>
+    <span class="defilement hidden md:block"><a href="#">10</a></span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="size-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+    </svg>
+
+  </div>
+
+  <script>
+
+    function toggleAccordion(element) {
+      const items = element.closest('.items');
+      items.classList.toggle('active');
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 

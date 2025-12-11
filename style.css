@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(./__MACOSX/Roboto/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url(./__MACOSX/Avenir/Avenir-Medium.ttf);
+}
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url(./__MACOSX/Roboto/Roboto-Thin.ttf);
+}
+*{
+    font-family: 'Avenir'
+}
+
+#search_input::-webkit-search-cancel-button{
+    display: none;
+}
+select{
+    appearance: none;
+}
+
+.items:not(.active) .content{
+    height: 0;
+    overflow: hidden;
+}
+.items.active .content{
+    padding: 20px 0;
+}
+.defilement{
+    padding: 8px 14px;
+    cursor: pointer;
+    
+}
+.defilement:hover{
+    transition: all 1s ease-in-out;
+background: #1a1a1a;
+color: white;
+
+}
+.pagination .default {
+background: #1a1a1a;
+color: white;
+
+}
+/* .content{
+    .background: #797878;
+} */
