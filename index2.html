@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The place where you will find your next house">
+   <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+   <link rel="stylesheet" href="style.css">
+  <title>Ecomm</title>
+</head>
+
+<body>
+  <header class="flex justify-between items-center">
+    <nav class="flex ... items-center justify-between mb-8">
+      <div class="flex ... items-center justify-between md:gap-x-12">
+        <img src="./__MACOSX/Logo.png" class=""/>
+        <ul class="left md:flex md:items-center md:gap-x-12 hidden md:block">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">MAGAZINE</a></li>
+        </ul>
+      </div>
+      <div class="relative right flex items-center w-25 gap-x-12 md:w-32">
+        <img src="./__MACOSX/Cart Button.png" />
+        <button type="button" class="cursor-pointer w-200 md:hidden" id="dropdownButton">
+          <img src="./__MACOSX/menu-hamburger.png" />
+        </button>
+        <div id="dropdownMenu"
+          class="absolute right-4 z-10 mt-40 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 hidden">
+          <div class="py-1" role="menu">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+              HOME
+            </a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+              SHOP
+            </a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+              MAGAZINE
+            </a>
+          </div>
+        </div>
+        <a href="#" class="hidden md:block">LOGIN</a>
+      </div>
+    </nav>
+
+
+    <div class="md:flex md:items-center">
+      
+      <div class="flex items-center md:w-4/6 pr-1">
+
+        <img src="./__MACOSX/Search.png" class="md:w-10 md:ml-6 w-5 ml-8 pb-2 flex-none" />
+
+        <div class="md:flex-auto border-b-3 border-solid md:ml-14 md:flex md:items-center md:justify-between md:pb-2 pb-2 ml-6 w-full">
+
+          <input type="search" name="search_bar" placeholder="Search..." class="outline-none md:w-4/6 md:text-3xl w-full" id="search_input" />
+
+          <div class="md:flex md:justify-between md:gap-x-4 md:w-35 md:ml-10 hidden md:block">
+            <div class="flex">
+              <span class="text-[10px] text-[#0000009f]">Powered by <strong class="text-[#000]">Algolia</strong></span>
+            </div>
+            <img src="./__MACOSX/Sajari Logo.png" />
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flex gap-x-6 mt-2 justify-end md:hidden ">
+        <div class="flex">
+          <span class="text-[13px] text-[#0000009f]">Powered by <strong class="text-[#000]">Algolia</strong></span>
+        </div>
+        <img src="./__MACOSX/Sajari Logo.png" />
+      </div>
+
+
+      <div class="flex-auto md:ml-10 md:mt-0 mt-12 md:px-0 px-1">
+        <select name="select_bar" class="w-full text-3xl outline-none shadow block py-2 rounded bg-no-repeat bg-right bg-[url('./__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
+          <option value="Best_match" class="pt-4">Best match</option>
+          <option value="Best_match">Best match</option>
+          <option value="Best_match">Best match</option>
+          <option value="Best_match">Best match</option>
+        </select>
+      </div>
+
+      <div class="md:hidden mt-8 px-1">
+        <select name="select_bar"
+          class="w-full text-3xl outline-none shadow block w-full pb-4 rounded bg-no-repeat bg-right bg-[url('./__MACOSX/flèche-2.png')] bg-[size:20px] cursor-pointer">
+          <option value="Best_match">Filters</option>
+          <option value="Best_match">Best match</option>
+          <option value="Best_match">Best match</option>
+          <option value="Best_match">Best match</option>
+        </select>
+      </div>
+
+
+    </div>
+  </header>
+  <main>
+    <aside>
+        <!-- waren part -->
+    </aside>
+    <div>
+        <!-- Arnella Part -->
+    
+    </div>
+    <div>
+        <!-- Waren part -->
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
